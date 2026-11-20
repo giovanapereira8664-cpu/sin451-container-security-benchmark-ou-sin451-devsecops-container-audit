@@ -1,0 +1,15 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;sentry/docker-compose.yml;229;HARDCODED_SECRET;;"- ""sentry-secrets:****""";;
+FN;netbox-docker/docker-compose.test.yml;12;ROOT_USER;;"user: ""netbox:root""";;
+FN;netbox-docker/docker-compose.yml;9;ROOT_USER;;"user: ""netbox:root""";;
+FN;dvwa/compose.yml;12;UNPINNED_VERSION;;image: ghcr.io/digininja/dvwa:latest;;
+FN;juice-shop/docker-compose.test.yml;7;UNPINNED_VERSION;;image: bkimminich/juice-shop:latest;;
+FN;juice-shop/infrastructure/Dockerfile;2;UNPINNED_VERSION;;RUN apt-get update && apt-get install -y --no-install-recommends dumb-init=1.2.5-* && rm -rf /var/lib/apt/lists/*;;
+FN;juice-shop/infrastructure/docker-compose.yml;21;UNPINNED_VERSION;;image: juice-shop:latest;;
+FN;mastodon/.devcontainer/Dockerfile;10;UNPINNED_VERSION;;RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y install --no-install-recommends libicu-dev libidn11-dev ffmpeg libvips42 lib;;
+FP;mastodon/.devcontainer/compose.yaml;19;HARDCODED_SECRET;RP-SECRET;DB_PASS=****;;
+FP;mastodon/.devcontainer/compose.yaml;45;HARDCODED_SECRET;RP-SECRET;POSTGRES_PASSWORD=****;;
+FP;juice-shop/Dockerfile;22;UNPINNED_VERSION;RP-TAG;FROM gcr.io/distroless/nodejs24-debian13;;
+FP;mastodon/Dockerfile;96;UNPINNED_VERSION;RP-PKG;RUN apt-get install ...;;
+FP;mastodon/Dockerfile;166;UNPINNED_VERSION;RP-PKG;RUN apt-get install ...;;
+FP;mastodon/Dockerfile;283;UNPINNED_VERSION;RP-PKG;RUN apt-get install ...;;

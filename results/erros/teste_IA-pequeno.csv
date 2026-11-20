@@ -1,0 +1,26 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;sentry/docker-compose.yml;229;HARDCODED_SECRET;;"- ""sentry-secrets:****""";;
+FN;sentry/docker-compose.yml;292;HARDCODED_SECRET;;AWS_ACCESS_KEY_ID: ****;;
+FN;sentry/docker-compose.yml;293;HARDCODED_SECRET;;AWS_SECRET_ACCESS_KEY: ****;;
+FN;sentry/docker-compose.yml;679;HARDCODED_SECRET;;"AWS_ACCESS_KEY: ""****""";;
+FN;sentry/docker-compose.yml;680;HARDCODED_SECRET;;"AWS_SECRET_KEY: ""****""";;
+FN;voting-app/docker-compose.images.yml;54;HARDCODED_SECRET;;"POSTGRES_PASSWORD: ""****""";;
+FN;voting-app/result/docker-compose.test.yml;51;HARDCODED_SECRET;;"POSTGRES_PASSWORD: ""****""";;
+FN;dvwa/Dockerfile;1;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;netbox-docker/Dockerfile;47;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;sentry/clickhouse/Dockerfile;2;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;dvwa/Dockerfile;10;UNPINNED_VERSION;;RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev iputils-ping git ;;
+FN;juice-shop/infrastructure/Dockerfile;2;UNPINNED_VERSION;;RUN apt-get update && apt-get install -y --no-install-recommends dumb-init=1.2.5-* && rm -rf /var/lib/apt/lists/*;;
+FN;juice-shop/infrastructure/docker-compose.yml;21;UNPINNED_VERSION;;image: juice-shop:latest;;
+FN;netbox-docker/Dockerfile;5;UNPINNED_VERSION;;RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no;;
+FN;netbox-docker/Dockerfile;49;UNPINNED_VERSION;;RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no;;
+FN;sentry/docker-compose.yml;127;UNPINNED_VERSION;;image: registry.gitlab.com/egos-tech/smtp;;
+FN;voting-app/docker-compose.images.yml;9;UNPINNED_VERSION;;image: dockersamples/examplevotingapp_vote;;
+FN;voting-app/docker-compose.images.yml;20;UNPINNED_VERSION;;image: dockersamples/examplevotingapp_result;;
+FN;voting-app/docker-compose.images.yml;31;UNPINNED_VERSION;;image: dockersamples/examplevotingapp_worker;;
+FN;voting-app/docker-compose.images.yml;41;UNPINNED_VERSION;;image: redis:alpine;;
+FN;voting-app/docker-compose.yml;55;UNPINNED_VERSION;;image: redis:alpine;;
+FN;voting-app/result/docker-compose.test.yml;43;UNPINNED_VERSION;;image: redis:alpine;;
+FP;netbox-docker/Dockerfile;93;HARDCODED_SECRET;LLM;"SECRET_KEY=""****""";;
+FP;netbox-docker/Dockerfile;95;HARDCODED_SECRET;LLM;"SECRET_KEY=""****""";;
+FP;voting-app/result/docker-compose.test.yml;48;UNPINNED_VERSION;LLM;image: postgres:9.4;;

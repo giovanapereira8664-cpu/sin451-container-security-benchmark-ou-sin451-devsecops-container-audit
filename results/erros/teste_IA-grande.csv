@@ -1,0 +1,24 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;sentry/docker-compose.yml;229;HARDCODED_SECRET;;"- ""sentry-secrets:****""";;
+FN;sentry/docker-compose.yml;292;HARDCODED_SECRET;;AWS_ACCESS_KEY_ID: ****;;
+FN;sentry/docker-compose.yml;293;HARDCODED_SECRET;;AWS_SECRET_ACCESS_KEY: ****;;
+FN;sentry/docker-compose.yml;679;HARDCODED_SECRET;;"AWS_ACCESS_KEY: ""****""";;
+FN;sentry/docker-compose.yml;680;HARDCODED_SECRET;;"AWS_SECRET_KEY: ""****""";;
+FN;netbox-docker/Dockerfile;47;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;netbox-docker/docker-compose.test.yml;12;ROOT_USER;;"user: ""netbox:root""";;
+FN;netbox-docker/docker-compose.yml;9;ROOT_USER;;"user: ""netbox:root""";;
+FN;juice-shop/docker-compose.test.yml;7;UNPINNED_VERSION;;image: bkimminich/juice-shop:latest;;
+FN;juice-shop/infrastructure/Dockerfile;2;UNPINNED_VERSION;;RUN apt-get update && apt-get install -y --no-install-recommends dumb-init=1.2.5-* && rm -rf /var/lib/apt/lists/*;;
+FN;juice-shop/infrastructure/docker-compose.yml;21;UNPINNED_VERSION;;image: juice-shop:latest;;
+FN;netbox-docker/Dockerfile;5;UNPINNED_VERSION;;RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no;;
+FN;netbox-docker/Dockerfile;49;UNPINNED_VERSION;;RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no;;
+FN;netbox-docker/docker-compose.test.yml;3;UNPINNED_VERSION;;image: ${IMAGE-docker.io/netboxcommunity/netbox:latest};;
+FN;sentry/docker-compose.yml;127;UNPINNED_VERSION;;image: registry.gitlab.com/egos-tech/smtp;;
+FP;awesome-compose/aspnet-mssql/compose.yaml;16;HARDCODED_SECRET;LLM;-P example_123;;
+FP;dvwa/Dockerfile;1;UNPINNED_VERSION;LLM;FROM docker.io/library/php:8-apache;;
+FP;gitea/Dockerfile.rootless;4;UNPINNED_VERSION;LLM;RUN apk --no-cache add build-base git nodejs pnpm;;
+FP;gitea/Dockerfile.rootless;20;UNPINNED_VERSION;LLM;RUN apk --no-cache add \;;
+FP;gitea/Dockerfile.rootless;50;UNPINNED_VERSION;LLM;RUN apk --no-cache upgrade && apk --no-cache add \;;
+FP;sentry/clickhouse/Dockerfile;2;UNPINNED_VERSION;LLM;FROM ${BASE_IMAGE};;
+FP;voting-app/docker-compose.images.yml;51;UNPINNED_VERSION;LLM;image: postgres:15-alpine;;
+FP;webgoat/Dockerfile;2;UNPINNED_VERSION;LLM;FROM docker.io/eclipse-temurin:25-jdk-noble;;
