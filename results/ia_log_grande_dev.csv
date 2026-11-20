@@ -1,0 +1,11 @@
+file,status,origem,segundos,tokens_entrada,tokens_saida,achados,descartados,erro
+dvwa/compose.yml,erro_json,cache,18.74,822,1500,0,0,resposta sem JSON válido
+awesome-compose/angular/compose.yaml,ok,cache,6.04,491,433,0,0,
+awesome-compose/apache-php/compose.yaml,ok,cache,7.27,482,439,0,0,
+voting-app/result/Dockerfile,ok,cache,19.15,679,1385,2,0,
+sentry/cron/Dockerfile,ok,cache,16.89,666,1020,2,0,
+sentry/sentry/Dockerfile,erro_json,cache,13.93,796,1500,0,0,resposta sem JSON válido
+gitea/Dockerfile,erro_json,cache,26.01,1707,1500,0,0,resposta sem JSON válido
+mastodon/docker-compose.yml,ok,cache,23.65,2185,1256,1,0,
+mastodon/.devcontainer/compose.yaml,erro_json,cache,28.77,1514,1500,0,0,resposta sem JSON válido
+mastodon/.devcontainer/Dockerfile,ok,cache,13.31,679,878,2,0,

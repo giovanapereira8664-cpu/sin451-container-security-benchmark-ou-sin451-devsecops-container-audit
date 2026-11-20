@@ -1,6 +1,6 @@
 {
   "_comentario": "Confira os nomes com: python 04_ia.py modelos. Prefira a mesma família em 3 tamanhos.",
-  "pequeno": "meta/llama-3.1-8b-instruct",
-  "medio": "meta/llama-3.3-70b-instruct",
-  "grande": "meta/llama-3.1-405b-instruct"
+  "pequeno": "nvidia/nemotron-3.5-bolt-e4b",
+  "medio": "nvidia/nemotron-3.5-lightning-30b-a3b",
+  "grande": "nvidia/nemotron-3-ultra-550b-a55b"
 }

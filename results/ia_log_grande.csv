@@ -1,0 +1,34 @@
+file,status,origem,segundos,tokens_entrada,tokens_saida,achados,descartados,erro
+dvwa/compose.yml,erro_json,cache,18.74,822,1500,0,0,resposta sem JSON válido
+dvwa/Dockerfile,ok,api,12.8,831,1168,4,0,
+juice-shop/docker-compose.test.yml,ok,api,13.92,476,732,0,0,
+juice-shop/Dockerfile,erro_json,api,19.58,1145,1500,0,0,resposta sem JSON válido
+juice-shop/infrastructure/docker-compose.yml,ok,api,23.02,1409,1232,0,0,
+juice-shop/infrastructure/Dockerfile,ok,api,9.33,709,504,0,0,
+webgoat/Dockerfile,ok,api,23.23,1096,1130,1,0,
+awesome-compose/angular/compose.yaml,ok,cache,6.04,491,433,0,0,
+awesome-compose/apache-php/compose.yaml,ok,cache,7.27,482,439,0,0,
+awesome-compose/aspnet-mssql/compose.yaml,ok,api,11.18,719,638,2,0,
+awesome-compose/django/compose.yaml,ok,api,5.93,467,422,0,0,
+voting-app/docker-compose.images.yml,ok,api,16.72,1124,1398,6,0,
+voting-app/docker-compose.yml,ok,api,23.83,1457,564,3,0,
+voting-app/result/docker-compose.test.yml,ok,api,7.68,963,495,2,0,
+voting-app/result/Dockerfile,ok,cache,19.15,679,1385,2,0,
+netbox-docker/docker-compose.test.override.yml,ok,api,9.42,582,748,3,0,
+netbox-docker/docker-compose.test.yml,erro_json,api,32.67,1220,1500,0,0,resposta sem JSON válido
+netbox-docker/docker-compose.yml,ok,api,20.58,1560,1494,0,0,
+netbox-docker/Dockerfile,erro_json,api,32.05,2364,1500,0,0,resposta sem JSON válido
+sentry/docker-compose.yml,erro_json,api,27.75,14053,1500,0,0,resposta sem JSON válido
+sentry/clickhouse/Dockerfile,ok,api,10.65,419,598,2,0,
+sentry/cron/Dockerfile,ok,cache,16.89,666,1020,2,0,
+sentry/sentry/Dockerfile,erro_json,cache,13.93,796,1500,0,0,resposta sem JSON válido
+gitea/Dockerfile,erro_json,cache,26.01,1707,1500,0,0,resposta sem JSON válido
+gitea/Dockerfile.rootless,ok,api,18.74,1769,1206,3,0,
+mastodon/docker-compose.yml,ok,cache,23.65,2185,1256,1,0,
+mastodon/Dockerfile,erro_json,api,32.66,6883,1500,0,0,resposta sem JSON válido
+mastodon/.devcontainer/compose.yaml,erro_json,cache,28.77,1514,1500,0,0,resposta sem JSON válido
+mastodon/.devcontainer/Dockerfile,ok,cache,13.31,679,878,2,0,
+vulhub/1panel/CVE-2024-39907/docker-compose.yml,ok,api,9.62,502,375,0,0,
+vulhub/activemq/CVE-2015-5254/docker-compose.yml,ok,api,3.07,503,262,0,0,
+vulhub/activemq/CVE-2016-3088/docker-compose.yml,ok,api,4.71,506,267,0,0,
+vulhub/activemq/CVE-2022-41678/docker-compose.yml,ok,api,7.58,521,333,0,0,

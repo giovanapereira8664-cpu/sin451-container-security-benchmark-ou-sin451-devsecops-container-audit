@@ -1,0 +1,7 @@
+{"category": "UNPINNED_VERSION", "evidence": "image: ghcr.io/digininja/dvwa:latest", "file": "dvwa/compose.yml", "line": 12, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "HARDCODED_SECRET", "evidence": "MYSQL_ROOT_PASSWORD=****", "file": "dvwa/compose.yml", "line": 31, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "HARDCODED_SECRET", "evidence": "MYSQL_PASSWORD=****", "file": "dvwa/compose.yml", "line": 34, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "HARDCODED_SECRET", "evidence": "DB_PASS: ****", "file": "mastodon/.devcontainer/compose.yaml", "line": 19, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "HARDCODED_SECRET", "evidence": "POSTGRES_PASSWORD: ****", "file": "mastodon/.devcontainer/compose.yaml", "line": 45, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "ROOT_USER", "evidence": "USER 0", "file": "sentry/cron/Dockerfile", "line": 3, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}
+{"category": "ROOT_USER", "evidence": "USER 0", "file": "sentry/sentry/Dockerfile", "line": 6, "message": "", "method": "IA-pequeno", "rule_id": "LLM", "tool": "nvidia/nemotron-3.5-bolt-e4b"}

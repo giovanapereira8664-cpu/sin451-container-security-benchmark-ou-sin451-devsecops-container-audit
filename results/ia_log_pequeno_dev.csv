@@ -1,0 +1,11 @@
+file,status,origem,segundos,tokens_entrada,tokens_saida,achados,descartados,erro
+dvwa/compose.yml,ok,cache,2.08,788,104,3,0,
+awesome-compose/angular/compose.yaml,ok,cache,0.67,464,6,0,0,
+awesome-compose/apache-php/compose.yaml,ok,cache,0.67,456,6,0,0,
+voting-app/result/Dockerfile,ok,cache,0.81,646,6,0,0,
+sentry/cron/Dockerfile,ok,cache,0.96,644,27,1,0,
+sentry/sentry/Dockerfile,ok,cache,1.01,775,27,1,0,
+gitea/Dockerfile,ok,cache,0.75,1653,6,0,0,
+mastodon/docker-compose.yml,ok,cache,0.8,2173,6,0,0,
+mastodon/.devcontainer/compose.yaml,ok,cache,1.36,1483,61,2,0,
+mastodon/.devcontainer/Dockerfile,ok,cache,0.6,656,6,0,0,

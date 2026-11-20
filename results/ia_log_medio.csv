@@ -1,0 +1,34 @@
+file,status,origem,segundos,tokens_entrada,tokens_saida,achados,descartados,erro
+dvwa/compose.yml,erro_json,cache,17.59,822,1500,0,0,resposta sem JSON válido
+dvwa/Dockerfile,erro_json,cache,8.96,831,1500,0,0,resposta sem JSON válido
+juice-shop/docker-compose.test.yml,erro_json,cache,11.75,476,1500,0,0,resposta sem JSON válido
+juice-shop/Dockerfile,erro_json,api,7.43,1145,1500,0,0,resposta sem JSON válido
+juice-shop/infrastructure/docker-compose.yml,erro_json,api,9.52,1409,1500,0,0,resposta sem JSON válido
+juice-shop/infrastructure/Dockerfile,erro_json,api,14.34,709,1500,0,0,resposta sem JSON válido
+webgoat/Dockerfile,erro_json,api,11.67,1096,1500,0,0,resposta sem JSON válido
+awesome-compose/angular/compose.yaml,ok,cache,8.3,491,1164,0,0,
+awesome-compose/apache-php/compose.yaml,ok,cache,6.86,482,1017,0,0,
+awesome-compose/aspnet-mssql/compose.yaml,erro_json,api,8.81,719,1500,0,0,resposta sem JSON válido
+awesome-compose/django/compose.yaml,ok,api,4.63,467,704,0,0,
+voting-app/docker-compose.images.yml,erro_json,api,8.27,1124,1500,0,0,resposta sem JSON válido
+voting-app/docker-compose.yml,erro_json,api,7.58,1457,1500,0,0,resposta sem JSON válido
+voting-app/result/docker-compose.test.yml,erro_json,api,9.42,963,1500,0,0,resposta sem JSON válido
+voting-app/result/Dockerfile,erro_json,cache,10.44,679,1500,0,0,resposta sem JSON válido
+netbox-docker/docker-compose.test.override.yml,erro_json,api,10.75,582,1500,0,0,resposta sem JSON válido
+netbox-docker/docker-compose.test.yml,erro_json,api,8.5,1220,1500,0,0,resposta sem JSON válido
+netbox-docker/docker-compose.yml,erro_json,api,9.83,1560,1500,0,0,resposta sem JSON válido
+netbox-docker/Dockerfile,erro_json,api,10.95,2364,1500,0,0,resposta sem JSON válido
+sentry/docker-compose.yml,erro_json,api,10.03,14053,1500,0,0,resposta sem JSON válido
+sentry/clickhouse/Dockerfile,erro_json,api,8.91,419,1500,0,0,resposta sem JSON válido
+sentry/cron/Dockerfile,erro_json,cache,10.24,666,1500,0,0,resposta sem JSON válido
+sentry/sentry/Dockerfile,erro_json,cache,9.93,796,1500,0,0,resposta sem JSON válido
+gitea/Dockerfile,erro_json,cache,8.5,1707,1500,0,0,resposta sem JSON válido
+gitea/Dockerfile.rootless,erro_json,api,9.62,1769,1500,0,0,resposta sem JSON válido
+mastodon/docker-compose.yml,erro_json,cache,8.7,2185,1500,0,0,resposta sem JSON válido
+mastodon/Dockerfile,erro_json,api,9.32,6883,1500,0,0,resposta sem JSON válido
+mastodon/.devcontainer/compose.yaml,erro_json,cache,8.7,1514,1500,0,0,resposta sem JSON válido
+mastodon/.devcontainer/Dockerfile,erro_json,cache,8.6,679,1500,0,0,resposta sem JSON válido
+vulhub/1panel/CVE-2024-39907/docker-compose.yml,ok,api,4.5,502,825,0,0,
+vulhub/activemq/CVE-2015-5254/docker-compose.yml,ok,api,4.2,503,855,0,0,
+vulhub/activemq/CVE-2016-3088/docker-compose.yml,ok,api,5.02,506,964,0,0,
+vulhub/activemq/CVE-2022-41678/docker-compose.yml,ok,api,5.43,521,904,0,0,

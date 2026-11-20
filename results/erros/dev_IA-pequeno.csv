@@ -1,0 +1,10 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;gitea/Dockerfile;51;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;mastodon/.devcontainer/Dockerfile;2;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;voting-app/result/Dockerfile;1;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;mastodon/.devcontainer/Dockerfile;10;UNPINNED_VERSION;;RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y install --no-install-recommends libicu-dev libidn11-dev ffmpeg libvips42 lib;;
+FN;sentry/cron/Dockerfile;8;UNPINNED_VERSION;;RUN apt-get update && apt-get install -y --no-install-recommends cron gosu && rm -r /var/lib/apt/lists/*;;
+FN;voting-app/result/Dockerfile;4;UNPINNED_VERSION;;RUN apt-get update && apt-get install -y --no-install-recommends curl tini && rm -rf /var/lib/apt/lists/*;;
+FP;mastodon/.devcontainer/compose.yaml;19;HARDCODED_SECRET;LLM;DB_PASS: ****;;
+FP;mastodon/.devcontainer/compose.yaml;45;HARDCODED_SECRET;LLM;POSTGRES_PASSWORD: ****;;
+FP;sentry/sentry/Dockerfile;6;ROOT_USER;LLM;USER 0;;

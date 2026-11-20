@@ -1,0 +1,6 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;dvwa/compose.yml;31;HARDCODED_SECRET;;- MYSQL_ROOT_PASSWORD=****;;
+FN;dvwa/compose.yml;34;HARDCODED_SECRET;;- MYSQL_PASSWORD=****;;
+FN;gitea/Dockerfile;51;ROOT_USER;;(estágio final sem nenhum USER — roda como root?);;
+FN;dvwa/compose.yml;12;UNPINNED_VERSION;;image: ghcr.io/digininja/dvwa:latest;;
+FP;mastodon/docker-compose.yml;32;HARDCODED_SECRET;LLM;ELASTIC_PASSWORD=****;;
