@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mysql:latest
+    privileged: true
+    environment:
+      MYSQL_ROOT_PASSWORD: senha123
+  web:
+    image: nginx:1.27
+    environment:
+      - API_TOKEN=${API_TOKEN}
+      - APP_ENV=prod
+      - APP_SECRET=abc

@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    image: sin451-lab-corrigido
+    user: "10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      DB_PASSWORD: ${DB_PASSWORD:?defina DB_PASSWORD ao rodar}
+  cache:
+    image: redis:7.4.1-alpine

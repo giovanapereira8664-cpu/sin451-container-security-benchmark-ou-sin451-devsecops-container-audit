@@ -1,0 +1,16 @@
+tool,rule_id,category,justificativa
+hadolint,DL3002,ROOT_USER,último USER é root
+hadolint,DL3006,UNPINNED_VERSION,imagem sem tag explícita
+hadolint,DL3007,UNPINNED_VERSION,uso da tag latest
+hadolint,DL3008,UNPINNED_VERSION,apt-get install sem versão
+hadolint,DL3018,UNPINNED_VERSION,apk add sem versão
+hadolint,DL3033,UNPINNED_VERSION,yum install sem versão
+hadolint,DL3037,UNPINNED_VERSION,zypper install sem versão
+hadolint,DL3041,UNPINNED_VERSION,dnf install sem versão
+hadolint,DL3013,OUT_OF_SCOPE,pip: dependência de linguagem fica fora da definição de UNPINNED_VERSION
+hadolint,DL3016,OUT_OF_SCOPE,npm: idem
+checkov,CKV_DOCKER_7,UNPINNED_VERSION,imagem base com tag latest
+checkov,CKV_DOCKER_3,ROOT_USER,nenhum usuário criado para o contêiner
+checkov,CKV_DOCKER_8,ROOT_USER,último USER é root
+checkov,CKV_SECRET_*,HARDCODED_SECRET,detector de segredos do Checkov
+checkov,CKV_DOCKER_2,OUT_OF_SCOPE,HEALTHCHECK ausente: não é uma das 3 categorias

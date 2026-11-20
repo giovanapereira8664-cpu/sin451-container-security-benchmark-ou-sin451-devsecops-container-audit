@@ -1,0 +1,22 @@
+{
+  "_comentario": "Textos da apresentação. Os números vêm sozinhos dos resultados; aqui ficam só as frases que são suas.",
+  "titulo": "Configuração insegura em contêineres: ferramentas clássicas × IA",
+  "subtitulo": "Desenvolvimento e avaliação empírica de uma ferramenta de análise de vulnerabilidades",
+  "autora": "Seu nome",
+  "disciplina": "SIN 451 — Segurança da Informação · UFV Campus Rio Paranaíba · 2026/2",
+  "data": "dezembro de 2026",
+  "concordancia_gabarito": "Reanotação de 6 arquivos: X de Y itens iguais",
+  "conclusoes": [
+    "Escreva aqui a conclusão principal, com o número que a sustenta (ex.: o A1 teve o maior F1, 0,00).",
+    "Uma frase sobre a IA: o tamanho do modelo melhorou o resultado? Em qual categoria?",
+    "Uma frase sobre custo: tempo e tokens da IA em comparação com o clássico."
+  ],
+  "limitacoes": [
+    "Corpus pequeno e gabarito anotado por uma só pessoa.",
+    "Checkov não analisa docker-compose (só o detector de segredos) nem alguns nomes de Dockerfile.",
+    "Regras próprias não conhecem o usuário padrão da imagem base.",
+    "Respostas da IA podem variar entre dias; o cache guarda as usadas.",
+    "Catálogo de modelos da NVIDIA muda com frequência."
+  ],
+  "link_repositorio": ""
+}

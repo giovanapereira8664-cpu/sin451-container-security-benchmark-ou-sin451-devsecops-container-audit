@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    image: sin451-lab-vulneravel
+    privileged: true
+    environment:
+      DB_PASSWORD: senha123
+  cache:
+    image: redis:latest

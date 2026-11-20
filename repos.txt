@@ -1,0 +1,12 @@
+# nome  url  [commit opcional]   — um repositório por linha. Linhas com # são ignoradas.
+# Depois da coleta, o commit usado fica registrado em corpus/manifesto.csv (reprodutibilidade).
+dvwa              https://github.com/digininja/DVWA
+juice-shop        https://github.com/juice-shop/juice-shop
+webgoat           https://github.com/WebGoat/WebGoat
+awesome-compose   https://github.com/docker/awesome-compose
+voting-app        https://github.com/dockersamples/example-voting-app
+netbox-docker     https://github.com/netbox-community/netbox-docker
+sentry            https://github.com/getsentry/self-hosted
+gitea             https://github.com/go-gitea/gitea
+mastodon          https://github.com/mastodon/mastodon
+vulhub            https://github.com/vulhub/vulhub
