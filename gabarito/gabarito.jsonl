@@ -1,0 +1,42 @@
+{"category": "HARDCODED_SECRET", "evidence": "SA_PASSWORD: ****", "file": "awesome-compose/aspnet-mssql/compose.yaml", "id": "G001", "line": 9, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "dvwa/Dockerfile", "id": "G002", "line": 1, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get install -y zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev iputils-ping git ", "file": "dvwa/Dockerfile", "id": "G003", "line": 10, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer", "file": "dvwa/Dockerfile", "id": "G004", "line": 19, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: ghcr.io/digininja/dvwa:latest", "file": "dvwa/compose.yml", "id": "G005", "line": 12, "note": " "}
+{"category": "HARDCODED_SECRET", "evidence": "- MYSQL_ROOT_PASSWORD=****", "file": "dvwa/compose.yml", "id": "G006", "line": 31, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "- MYSQL_PASSWORD=****", "file": "dvwa/compose.yml", "id": "G007", "line": 34, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "gitea/Dockerfile", "id": "G008", "line": 51, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: bkimminich/juice-shop:latest", "file": "juice-shop/docker-compose.test.yml", "id": "G009", "line": 7, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN apt-get update && apt-get install -y --no-install-recommends dumb-init=1.2.5-* && rm -rf /var/lib/apt/lists/*", "file": "juice-shop/infrastructure/Dockerfile", "id": "G010", "line": 2, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: juice-shop:latest", "file": "juice-shop/infrastructure/docker-compose.yml", "id": "G011", "line": 21, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "mastodon/.devcontainer/Dockerfile", "id": "G012", "line": 2, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y install --no-install-recommends libicu-dev libidn11-dev ffmpeg libvips42 lib", "file": "mastodon/.devcontainer/Dockerfile", "id": "G013", "line": 10, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no", "file": "netbox-docker/Dockerfile", "id": "G014", "line": 5, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "netbox-docker/Dockerfile", "id": "G015", "line": 47, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN export DEBIAN_FRONTEND=noninteractive && apt-get update -qq && apt-get upgrade --yes -qq --no-install-recommends && apt-get install --yes -qq --no", "file": "netbox-docker/Dockerfile", "id": "G016", "line": 49, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "SUPERUSER_API_KEY: \"****\"", "file": "netbox-docker/docker-compose.test.override.yml", "id": "G017", "line": 5, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "SUPERUSER_API_TOKEN: \"****\"", "file": "netbox-docker/docker-compose.test.override.yml", "id": "G018", "line": 6, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "SUPERUSER_PASSWORD: \"****\"", "file": "netbox-docker/docker-compose.test.override.yml", "id": "G019", "line": 9, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: ${IMAGE-docker.io/netboxcommunity/netbox:latest}", "file": "netbox-docker/docker-compose.test.yml", "id": "G020", "line": 3, "note": ""}
+{"category": "ROOT_USER", "evidence": "user: \"netbox:root\"", "file": "netbox-docker/docker-compose.test.yml", "id": "G021", "line": 12, "note": ""}
+{"category": "ROOT_USER", "evidence": "user: \"netbox:root\"", "file": "netbox-docker/docker-compose.yml", "id": "G022", "line": 9, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "sentry/clickhouse/Dockerfile", "id": "G023", "line": 2, "note": ""}
+{"category": "ROOT_USER", "evidence": "USER 0", "file": "sentry/cron/Dockerfile", "id": "G024", "line": 3, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN apt-get update && apt-get install -y --no-install-recommends cron gosu && rm -r /var/lib/apt/lists/*", "file": "sentry/cron/Dockerfile", "id": "G025", "line": 8, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: registry.gitlab.com/egos-tech/smtp", "file": "sentry/docker-compose.yml", "id": "G026", "line": 127, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "- \"sentry-secrets:****\"", "file": "sentry/docker-compose.yml", "id": "G027", "line": 229, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "AWS_ACCESS_KEY_ID: ****", "file": "sentry/docker-compose.yml", "id": "G028", "line": 292, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "AWS_SECRET_ACCESS_KEY: ****", "file": "sentry/docker-compose.yml", "id": "G029", "line": 293, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "AWS_ACCESS_KEY: \"****\"", "file": "sentry/docker-compose.yml", "id": "G030", "line": 679, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "AWS_SECRET_KEY: \"****\"", "file": "sentry/docker-compose.yml", "id": "G031", "line": 680, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: dockersamples/examplevotingapp_vote", "file": "voting-app/docker-compose.images.yml", "id": "G032", "line": 9, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: dockersamples/examplevotingapp_result", "file": "voting-app/docker-compose.images.yml", "id": "G033", "line": 20, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: dockersamples/examplevotingapp_worker", "file": "voting-app/docker-compose.images.yml", "id": "G034", "line": 31, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: redis:alpine", "file": "voting-app/docker-compose.images.yml", "id": "G035", "line": 41, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "POSTGRES_PASSWORD: \"****\"", "file": "voting-app/docker-compose.images.yml", "id": "G036", "line": 54, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: redis:alpine", "file": "voting-app/docker-compose.yml", "id": "G037", "line": 55, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "POSTGRES_PASSWORD: \"****\"", "file": "voting-app/docker-compose.yml", "id": "G038", "line": 68, "note": ""}
+{"category": "ROOT_USER", "evidence": "(estágio final sem nenhum USER — roda como root?)", "file": "voting-app/result/Dockerfile", "id": "G039", "line": 1, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "RUN apt-get update && apt-get install -y --no-install-recommends curl tini && rm -rf /var/lib/apt/lists/*", "file": "voting-app/result/Dockerfile", "id": "G040", "line": 4, "note": ""}
+{"category": "UNPINNED_VERSION", "evidence": "image: redis:alpine", "file": "voting-app/result/docker-compose.test.yml", "id": "G041", "line": 43, "note": ""}
+{"category": "HARDCODED_SECRET", "evidence": "POSTGRES_PASSWORD: \"****\"", "file": "voting-app/result/docker-compose.test.yml", "id": "G042", "line": 51, "note": ""}
