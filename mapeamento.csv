@@ -14,3 +14,14 @@ checkov,CKV_DOCKER_3,ROOT_USER,nenhum usuário criado para o contêiner
 checkov,CKV_DOCKER_8,ROOT_USER,último USER é root
 checkov,CKV_SECRET_*,HARDCODED_SECRET,detector de segredos do Checkov
 checkov,CKV_DOCKER_2,OUT_OF_SCOPE,HEALTHCHECK ausente: não é uma das 3 categorias
+hadolint,DL3059,OUT_OF_SCOPE,Multiplas instrucoes RUN consecutivas nao estao nas 3 categorias
+hadolint,DL3066,OUT_OF_SCOPE,UID nao numerico nao esta nas 3 categorias
+hadolint,DL3003,OUT_OF_SCOPE,WORKDIR em vez de cd nao esta nas 3 categorias
+hadolint,DL3042,OUT_OF_SCOPE,Cache do pip nao esta nas 3 categorias
+checkov,CKV_DOCKER_4,OUT_OF_SCOPE,COPY em vez de ADD nao esta nas 3 categorias
+hadolint,DL3015,OUT_OF_SCOPE,Flag --no-install-recommends nao esta nas 3 categorias
+hadolint,DL4006,OUT_OF_SCOPE,Opcao -o pipefail nao esta nas 3 categorias
+hadolint,DL3009,OUT_OF_SCOPE,Limpeza de /var/lib/apt/lists nao esta nas 3 categorias
+hadolint,DL3025,OUT_OF_SCOPE,Notacao JSON em CMD e ENTRYPOINT nao esta nas 3 categorias
+checkov,CKV_DOCKER_1,OUT_OF_SCOPE,Porta 22 exposta nao esta nas 3 categorias
+checkov,CKV2_DOCKER_17,OUT_OF_SCOPE,Uso de chpasswd nao esta nas 3 categorias

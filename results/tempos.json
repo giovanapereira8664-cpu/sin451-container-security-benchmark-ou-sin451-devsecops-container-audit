@@ -1,0 +1,5 @@
+{
+ "hadolint_s": 7.7,
+ "checkov_s": 3.4,
+ "regras_proprias_s": 0.05
+}

@@ -1,0 +1,10 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;dvwa/compose.yml;12;UNPINNED_VERSION;;image: ghcr.io/digininja/dvwa:latest;limitacao_regra;"Tag :latest em image no compose.yml nao foi identificada pelo A1; fica registrada como limitacao no relatorio. "
+FP;mastodon/.devcontainer/compose.yaml;19;HARDCODED_SECRET;RP-SECRET;DB_PASS=****;falso_positivo_regra;Falso positivo do RP-SECRET em DB_PASS=**** dentro de compose.yaml de devcontainer sem segredo real no gabarito. 
+FP;mastodon/.devcontainer/compose.yaml;45;HARDCODED_SECRET;RP-SECRET;POSTGRES_PASSWORD=****;falso_positivo_regra;Falso positivo do RP-SECRET em POSTGRES_PASSWORD=**** dentro de compose.yaml de devcontainer sem segredo real no gabarito.
+FP;gitea/Dockerfile;1;ROOT_USER;CKV_DOCKER_3;# syntax=docker/dockerfile:1;ruido_ferramenta;Falso positivo do CKV_DOCKER_3 na linha de comentario # syntax=docker/dockerfile:1. 
+FP;gitea/Dockerfile;4;UNPINNED_VERSION;DL3018;RUN apk --no-cache add build-base git nodejs pnpm;fora_gabarito_dev;Falso positivo do DL3018 em comando apk add sem versao fixada fora do gabarito do conjunto dev. 
+FP;gitea/Dockerfile;20;UNPINNED_VERSION;DL3018;RUN apk --no-cache add \;fora_gabarito_dev;Falso positivo do DL3018 em comando apk add sem versao fixada fora do gabarito do conjunto dev. 
+FP;gitea/Dockerfile;55;UNPINNED_VERSION;DL3018;RUN apk --no-cache upgrade && apk --no-cache add \;fora_gabarito_dev;Falso positivo do DL3018 em apk upgrade e apk add sem versao fixada fora do gabarito do conjunto dev.
+FP;sentry/cron/Dockerfile;2;UNPINNED_VERSION;CKV_DOCKER_7;FROM ${BASE_IMAGE};ruido_ferramenta;Falso positivo do CKV_DOCKER_7 em FROM ${BASE_IMAGE} com imagem parametrizada por variavel. 
+FP;sentry/sentry/Dockerfile;2;UNPINNED_VERSION;CKV_DOCKER_7;FROM ${SENTRY_IMAGE};ruido_ferramenta;Falso positivo do CKV_DOCKER_7 em FROM ${SENTRY_IMAGE} com imagem parametrizada por variavel. 

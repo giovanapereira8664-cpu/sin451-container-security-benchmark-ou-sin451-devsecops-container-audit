@@ -1,0 +1,18 @@
+python 3.13.3 (Linux)
+hadolint Haskell Dockerfile Linter 2.15.1
+checkov 3.4.6
+checkov frameworks: dockerfile, secrets
+
+Rodando Hadolint...
+Rodando Checkov (demora alguns minutos)...
+
+Achados brutos por ferramenta e categoria:
+  hadolint         UNPINNED_VERSION=13  ROOT_USER=1  HARDCODED_SECRET=0  OUT_OF_SCOPE=27
+  checkov          UNPINNED_VERSION=5  ROOT_USER=5  HARDCODED_SECRET=3  OUT_OF_SCOPE=15
+  regras_proprias  UNPINNED_VERSION=18  ROOT_USER=7  HARDCODED_SECRET=15  OUT_OF_SCOPE=0
+  total A0 = 69 | regras próprias = 40 | A1 = 109
+
+Cobertura do Checkov (dockerfile): 12 de 13 Dockerfiles analisados
+  não analisado: mastodon/.devcontainer/Dockerfile
+
+Regras fora de escopo: results/fora_de_escopo.csv (decida e registre cada uma)

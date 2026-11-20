@@ -1,0 +1,5 @@
+﻿tipo;file;line;category;rule_id;evidence;modo;observacao
+FN;dvwa/compose.yml;12;UNPINNED_VERSION;;image: ghcr.io/digininja/dvwa:latest;;
+FN;mastodon/.devcontainer/Dockerfile;10;UNPINNED_VERSION;;RUN apt-get update && export DEBIAN_FRONTEND=noninteractive && apt-get -y install --no-install-recommends libicu-dev libidn11-dev ffmpeg libvips42 lib;;
+FP;mastodon/.devcontainer/compose.yaml;19;HARDCODED_SECRET;RP-SECRET;DB_PASS=****;;
+FP;mastodon/.devcontainer/compose.yaml;45;HARDCODED_SECRET;RP-SECRET;POSTGRES_PASSWORD=****;;

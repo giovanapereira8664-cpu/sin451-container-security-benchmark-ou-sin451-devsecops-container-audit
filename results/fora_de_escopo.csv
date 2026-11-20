@@ -1,0 +1,14 @@
+﻿tool;rule_id;mensagem;qtd
+hadolint;DL3059;Multiple consecutive `RUN` instructions. Consider consolidation.;14
+checkov;CKV_DOCKER_2;Ensure that HEALTHCHECK instructions have been added to container images;11
+hadolint;DL3066;Non-numeric user-id may not be resolvable by host system;4
+hadolint;DL3003;Use WORKDIR to switch to a directory;2
+hadolint;DL3042;Avoid use of cache directory with pip. Use `pip install --no-cache-dir <package>;2
+checkov;CKV_DOCKER_4;Ensure that COPY is used instead of ADD in Dockerfiles;2
+hadolint;DL3015;Avoid additional packages by specifying `--no-install-recommends`;1
+hadolint;DL4006;Set the SHELL option -o pipefail before RUN with a pipe in it. If you are using ;1
+hadolint;DL3009;Delete the apt lists (/var/lib/apt/lists) after installing something;1
+hadolint;DL3016;Pin versions in npm. Instead of `npm install <package>` use `npm install <packag;1
+hadolint;DL3025;Use arguments JSON notation for CMD and ENTRYPOINT arguments;1
+checkov;CKV_DOCKER_1;Ensure port 22 is not exposed;1
+checkov;CKV2_DOCKER_17;Ensure that 'chpasswd' is not used to set or remove passwords;1
