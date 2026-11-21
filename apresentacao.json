@@ -2,14 +2,13 @@
   "_comentario": "Textos da apresentação. Os números vêm sozinhos dos resultados; aqui ficam só as frases que são suas.",
   "titulo": "Configuração insegura em contêineres: ferramentas clássicas × IA",
   "subtitulo": "Desenvolvimento e avaliação empírica de uma ferramenta de análise de vulnerabilidades",
-  "autora": "Seu nome",
   "disciplina": "SIN 451 — Segurança da Informação · UFV Campus Rio Paranaíba · 2026/2",
-  "data": "dezembro de 2026",
-  "concordancia_gabarito": "Reanotação de 6 arquivos: X de Y itens iguais",
+  "data": "novembro de 2026",
+  "concordancia_gabarito": "Reanotação de 6 arquivos (102 linhas avaliadas; 9 marcações S alinhadas aos 9 itens do gabarito nesses arquivos)",
   "conclusoes": [
-    "Escreva aqui a conclusão principal, com o número que a sustenta (ex.: o A1 teve o maior F1, 0,00).",
-    "Uma frase sobre a IA: o tamanho do modelo melhorou o resultado? Em qual categoria?",
-    "Uma frase sobre custo: tempo e tokens da IA em comparação com o clássico."
+    "As regras próprias obtiveram o maior F1 geral no conjunto de teste (0,8387; 0,8000 em todos os arquivos), superando A1 (0,7647) e A0 (0,3404).",
+    "Entre os modelos de IA no teste, IA-grande alcançou F1 de 0,5965 contra 0,4444 de IA-pequeno e 0,0000 de IA-medio, destacando-se em HARDCODED_SECRET (0,7000 vs. 0,5263).",
+    "A análise clássica e as regras próprias rodam localmente em segundos (7,7 s no Hadolint, 3,4 s no Checkov e 0,05 s nas regras próprias) sem tokens, enquanto a IA tem maior latência por arquivo (cerca de 6–23 s no IA-grande vs. ~0,7–2,1 s no IA-pequeno) e consome tokens de entrada e saída."
   ],
   "limitacoes": [
     "Corpus pequeno e gabarito anotado por uma só pessoa.",
@@ -18,5 +17,8 @@
     "Respostas da IA podem variar entre dias; o cache guarda as usadas.",
     "Catálogo de modelos da NVIDIA muda com frequência."
   ],
-  "link_repositorio": ""
+  "link_repositorio": "https://github.com/giovanapereira8664-cpu/sin451-container-security-benchmark-ou-sin451-devsecops-container-audit",
+  "autor": "Giovana Pereira da Silva, Gabriel Mello Lobo e Lucas Dias de Queiroz",
+  "autores": "Giovana Pereira da Silva, Gabriel Mello Lobo e Lucas Dias de Queiroz",
+  "autora": "Giovana Pereira da Silva, Gabriel Mello Lobo e Lucas Dias de Queiroz"
 }
