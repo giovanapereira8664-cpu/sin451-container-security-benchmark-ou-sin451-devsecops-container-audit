@@ -1,0 +1,116 @@
+{
+ "data": "20/11/2026 20:42",
+ "docker": true,
+ "versoes": {
+  "vulneravel": {
+   "estatico": {
+    "por_categoria": {
+     "UNPINNED_VERSION": 3,
+     "ROOT_USER": 2,
+     "HARDCODED_SECRET": 2
+    },
+    "por_ferramenta": {
+     "regras_proprias": 7,
+     "hadolint": 2,
+     "checkov": 1
+    },
+    "achados": [
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 1,
+      "category": "UNPINNED_VERSION",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 2,
+      "category": "UNPINNED_VERSION",
+      "tool": "hadolint"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 2,
+      "category": "UNPINNED_VERSION",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 3,
+      "category": "HARDCODED_SECRET",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 5,
+      "category": "ROOT_USER",
+      "tool": "checkov"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 5,
+      "category": "ROOT_USER",
+      "tool": "hadolint"
+     },
+     {
+      "file": "vulneravel/Dockerfile",
+      "line": 5,
+      "category": "ROOT_USER",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/docker-compose.yml",
+      "line": 5,
+      "category": "ROOT_USER",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/docker-compose.yml",
+      "line": 7,
+      "category": "HARDCODED_SECRET",
+      "tool": "regras_proprias"
+     },
+     {
+      "file": "vulneravel/docker-compose.yml",
+      "line": 9,
+      "category": "UNPINNED_VERSION",
+      "tool": "regras_proprias"
+     }
+    ]
+   },
+   "execucao": {
+    "usuario": "uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)",
+    "root": true,
+    "capacidades": 41,
+    "segredo_na_imagem": true,
+    "segredo_evidencia": [
+     "ENV DB_PASSWORD=****",
+     "[\"PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\"LANG=C.UTF-8\",\"PYTHON_VERSION=3.15.2\",\"PYTHON_SHA256=8b5536d280142ecf6cdfe15d12a21ba1c65e300bbf7b28a8d0cdb849575797de\",\"DB_PASSWORD=****\"]"
+    ],
+    "imagem_base": "python:alpine",
+    "digest_hoje": "",
+    "tag_movel": true
+   }
+  },
+  "corrigido": {
+   "estatico": {
+    "por_categoria": {
+     "UNPINNED_VERSION": 0,
+     "ROOT_USER": 0,
+     "HARDCODED_SECRET": 0
+    },
+    "por_ferramenta": {},
+    "achados": []
+   },
+   "execucao": {
+    "usuario": "uid=10001(app) gid=10001(app) groups=10001(app)",
+    "root": false,
+    "capacidades": 0,
+    "segredo_na_imagem": false,
+    "segredo_evidencia": [],
+    "imagem_base": "python:3.12-alpine3.20",
+    "digest_hoje": "",
+    "tag_movel": false
+   }
+  }
+ }
+}

@@ -130,10 +130,10 @@ def main():
         ax.set_ylim(0, 1)
         ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
         ax.set_xlabel("Tolerância de linhas (±)", color=CINZA)
-        ax.legend(frameon=False, fontsize=8, loc="lower right")
+        ax.legend(frameon=False, fontsize=8, loc="center left", bbox_to_anchor=(1.02, 0.5))
         estilo(ax, "F1 conforme a tolerância de linhas")
         fig.tight_layout()
-        fig.savefig(pasta / "sensibilidade_tolerancia.png")
+        fig.savefig(pasta / "sensibilidade_tolerancia.png", bbox_inches="tight")
         plt.close(fig)
     print(f"Figuras em {pasta}:")
     for p in sorted(pasta.glob("*.png")):

@@ -1,0 +1,113 @@
+### Laboratório CORRIGIDO — 20/11/2026 20:42
+$ docker run --rm -i hadolint/hadolint hadolint -f json -
+  [{"code":"DL3066","column":1,"file":"-","level":"info","line":4,"message":"Non-numeric user-id may not be resolvable by host system"}]
+$ checkov -d /tmp/tmprext_8ya --framework dockerfile secrets -o json --compact
+                  "file_abs_path": "/tmp/tmprext_8ya/corrigido/Dockerfile",
+                  "repo_file_path": "/tmp/tmprext_8ya/corrigido/Dockerfile",
+                  "file_line_range": [
+                      1,
+                      5
+                  ],
+                  "resource": "/corrigido/Dockerfile.",
+                  "evaluations": null,
+                  "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                  "fixed_definition": null,
+                  "entity_tags": null,
+                  "caller_file_path": null,
+                  "caller_file_line_range": null,
+                  "resource_address": null,
+                  "severity": null,
+                  "bc_category": null,
+                  "benchmarks": null,
+                  "description": null,
+                  "short_description": null,
+                  "vulnerability_details": null,
+                  "connected_node": null,
+                  "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images",
+                  "details": [],
+                  "check_len": null,
+                  "definition_context_file_path": null
+              }
+          ],
+          "skipped_checks": [],
+          "parsing_errors": []
+      },
+      "summary": {
+          "passed": 23,
+          "failed": 1,
+          "skipped": 0,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.4.6"
+      },
+      "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+  }
+Achados estáticos: UNPINNED_VERSION=0, ROOT_USER=0, HARDCODED_SECRET=0
+$ docker compose -f demo/corrigido/docker-compose.yml build app
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 5.24MB / 13.55MB 1.8s
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 6.29MB / 13.55MB 2.0s
+  #6 sha256:0a9a5dfd008f05ebc27e4790db0709a29e527690c21bcbcd01481eaeb6bb49dc 2.10MB / 3.63MB 1.8s
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 7.34MB / 13.55MB 2.1s
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 8.39MB / 13.55MB 2.3s
+  #6 sha256:0a9a5dfd008f05ebc27e4790db0709a29e527690c21bcbcd01481eaeb6bb49dc 3.63MB / 3.63MB 2.4s done
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 9.44MB / 13.55MB 2.4s
+  #6 extracting sha256:0a9a5dfd008f05ebc27e4790db0709a29e527690c21bcbcd01481eaeb6bb49dc 0.1s done
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 10.49MB / 13.55MB 2.6s
+  #6 extracting sha256:1799ce2dd17e35796abb5baa5ebd092f2e3acebfafbd180f0e07c2403e9209a7 0.1s done
+  #6 sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 13.55MB / 13.55MB 2.8s done
+  #6 extracting sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a
+  #6 extracting sha256:8be8a68a3e49fec0b56794e7483db21dd3d7adf6591594deaa58e270f22f976a 0.4s done
+  #6 DONE 3.4s
+  
+  #6 [1/3] FROM docker.io/library/python:3.12-alpine3.20@sha256:25849f9599e06dfe4d11b552e06f5ac4cc2ad342054eb81f7877e611f6f87c66
+  #6 extracting sha256:1d7a63b094ee269ef952d5db0120848504eae8e5a17c28267080178878fe7efc 0.0s done
+  #6 DONE 3.4s
+  
+  #7 [2/3] RUN adduser -D -u 10001 app
+  #7 DONE 0.3s
+  
+  #8 [3/3] COPY app.py /app/app.py
+  #8 DONE 0.0s
+  
+  #9 exporting to image
+  #9 exporting layers 0.1s done
+  #9 exporting manifest sha256:ff625fe087bf6272c0fd8ed109feb0ecb6ad2a66c5990d055193fa8e3a64bd64 done
+  #9 exporting config sha256:28c25d5bbee7770969ddae583b448bfd7f6291663e12db6c45553042d9a38d8c done
+  #9 exporting attestation manifest sha256:758c710ce704f8f230dcd1fff83fa19095c4d8ee2203b751d0d2a821282a4ed1 0.0s done
+  #9 exporting manifest list sha256:9004608db71bab78e8fef7ca2088623d0be0ee051180cb5c3e9ffcd096179ec6 done
+  #9 naming to docker.io/library/sin451-lab-corrigido:latest done
+  #9 unpacking to docker.io/library/sin451-lab-corrigido:latest
+  #9 unpacking to docker.io/library/sin451-lab-corrigido:latest 0.7s done
+  #9 DONE 0.8s
+  
+  #10 resolving provenance for metadata file
+  #10 DONE 0.0s
+   Image sin451-lab-corrigido Building 
+   Image sin451-lab-corrigido Built
+$ docker compose -f demo/corrigido/docker-compose.yml run --rm --no-deps app sh -c id; grep CapEff /proc/self/status
+  uid=10001(app) gid=10001(app) groups=10001(app)
+  CapEff:	0000000000000000
+   Network sin451corrigido_default Creating 
+   Network sin451corrigido_default Created 
+   Container sin451corrigido-app-run-ff5d19a179ea Creating 
+   Container sin451corrigido-app-run-ff5d19a179ea Created
+$ docker history --no-trunc --format {{.CreatedBy}} sin451-lab-corrigido
+  CMD ["python" "/app/app.py"]
+  USER app
+  COPY app.py /app/app.py # buildkit
+  RUN /bin/sh -c adduser -D -u 10001 app # buildkit
+  CMD ["python3"]
+  RUN /bin/sh -c set -eux;  for src in idle3 pip3 pydoc3 python3 python3-config; do   dst="$(echo "$src" | tr -d 3)";   [ -s "/usr/local/bin/$src" ];   [ ! -e "/usr/local/bin/$dst" ];   ln -svT "$src" "/usr/local/bin/$dst";  done # buildkit
+  RUN /bin/sh -c set -eux;   apk add --no-cache --virtual .build-deps   gnupg   tar   xz     bluez-dev   bzip2-dev   dpkg-dev dpkg   findutils   gcc   gdbm-dev   libc-dev   libffi-dev   libnsl-dev   libtirpc-dev   linux-headers   make   ncurses-dev   openssl-dev   pax-utils   readline-dev   sqlite-dev
+  ENV PYTHON_SHA256=07ab697474595e06f06647417d3c7fa97ded07afc1a7e4454c5639919b46eaea
+  ENV PYTHON_VERSION=3.12.10
+  ENV GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305
+  RUN /bin/sh -c set -eux;  apk add --no-cache   ca-certificates   tzdata  ; # buildkit
+  ENV LANG=C.UTF-8
+  ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  CMD ["/bin/sh"]
+  ADD alpine-minirootfs-3.20.6-x86_64.tar.gz / # buildkit
+$ docker image inspect --format {{json .Config.Env}} sin451-lab-corrigido
+  ["PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=C.UTF-8","GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305","PYTHON_VERSION=3.12.10","PYTHON_SHA256=07ab697474595e06f06647417d3c7fa97ded07afc1a7e4454c5639919b46eaea"]
+$ docker image inspect --format {{index .RepoDigests 0}} python:3.12-alpine3.20
+  Error response from daemon: No such image: python:3.12-alpine3.20

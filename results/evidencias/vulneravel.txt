@@ -1,0 +1,113 @@
+### Laboratório VULNERAVEL — 20/11/2026 20:42
+$ docker run --rm -i hadolint/hadolint hadolint -f json -
+  [{"code":"DL3018","column":1,"file":"-","level":"warning","line":2,"message":"Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"},{"code":"DL3064","column":1,"file":"-","level":"warning","line":3,"message":"Potentially sensitive data should not be used in the 
+$ checkov -d /tmp/tmpbs192nd2 --framework dockerfile secrets -o json --compact
+                  "file_abs_path": "/tmp/tmpbs192nd2/vulneravel/Dockerfile",
+                  "repo_file_path": "/tmp/tmpbs192nd2/vulneravel/Dockerfile",
+                  "file_line_range": [
+                      1,
+                      6
+                  ],
+                  "resource": "/vulneravel/Dockerfile.",
+                  "evaluations": null,
+                  "check_class": "checkov.dockerfile.checks.HealthcheckExists",
+                  "fixed_definition": null,
+                  "entity_tags": null,
+                  "caller_file_path": null,
+                  "caller_file_line_range": null,
+                  "resource_address": null,
+                  "severity": null,
+                  "bc_category": null,
+                  "benchmarks": null,
+                  "description": null,
+                  "short_description": null,
+                  "vulnerability_details": null,
+                  "connected_node": null,
+                  "guideline": "https://docs.prismacloud.io/en/enterprise-edition/policy-reference/docker-policies/docker-policy-index/ensure-that-healthcheck-instructions-have-been-added-to-container-images",
+                  "details": [],
+                  "check_len": null,
+                  "definition_context_file_path": null
+              }
+          ],
+          "skipped_checks": [],
+          "parsing_errors": []
+      },
+      "summary": {
+          "passed": 27,
+          "failed": 2,
+          "skipped": 0,
+          "parsing_errors": 0,
+          "resource_count": 1,
+          "checkov_version": "3.4.6"
+      },
+      "url": "Add an api key '--bc-api-key <api-key>' to see more detailed insights via https://bridgecrew.cloud"
+  }
+Achados estáticos: UNPINNED_VERSION=3, ROOT_USER=2, HARDCODED_SECRET=2
+$ docker compose -f demo/vulneravel/docker-compose.yml build app
+  #6 extracting sha256:55d6aff2002377528af40eb9c777124114ac87f34bc36b849eb998f9973d7360
+  #6 extracting sha256:55d6aff2002377528af40eb9c777124114ac87f34bc36b849eb998f9973d7360 0.5s done
+  #6 DONE 3.9s
+  
+  #6 [1/3] FROM docker.io/library/python:alpine@sha256:0f9552bb28711333da16915ec146f5e6bb44a7fdac9ced15dc17c2e0206346dd
+  #6 extracting sha256:912101e0eb182d8de495d29926c22dd786b95952ff7d5c1a508aa3d534b8539b 0.0s done
+  #6 DONE 3.9s
+  
+  #7 [2/3] RUN apk add --no-cache curl
+  #7 1.598 (1/8) Installing brotli-libs (1.2.1-r0)
+  #7 1.655 (2/8) Installing c-ares (1.34.9-r0)
+  #7 1.681 (3/8) Installing libunistring (1.4.2-r0)
+  #7 1.766 (4/8) Installing libidn2 (2.3.8-r0)
+  #7 1.794 (5/8) Installing nghttp2-libs (1.70.0-r0)
+  #7 1.819 (6/8) Installing libpsl (0.21.5-r3)
+  #7 1.839 (7/8) Installing libcurl (8.23.0-r0)
+  #7 1.883 (8/8) Installing curl (8.23.0-r0)
+  #7 1.927 Executing busybox-1.37.0-r31.trigger
+  #7 1.937 OK: 19.5 MiB in 41 packages
+  #7 DONE 2.1s
+  
+  #8 [3/3] COPY app.py /app/app.py
+  #8 DONE 0.1s
+  
+  #9 exporting to image
+  #9 exporting layers
+  #9 exporting layers 0.3s done
+  #9 exporting manifest sha256:eff5bb068867b96ca0a76920a28c091f163fc58b7fb2a4880bbd668b6141a408 done
+  #9 exporting config sha256:719c211cea7400129299b06ec1c9fa46fc069b82dddba82b77a0a588e7b7c616 done
+  #9 exporting attestation manifest sha256:b4ffd33042e54bc43675cc63c22483bbdfa496553e9fe9cec1779eea2bab28a4 0.0s done
+  #9 exporting manifest list sha256:ed689180c5a39d5a4b115ebd8f04757ebcc41939de98edc08cc0e8e1d83ea682 done
+  #9 naming to docker.io/library/sin451-lab-vulneravel:latest done
+  #9 unpacking to docker.io/library/sin451-lab-vulneravel:latest
+  #9 unpacking to docker.io/library/sin451-lab-vulneravel:latest 0.8s done
+  #9 DONE 1.2s
+  
+  #10 resolving provenance for metadata file
+  #10 DONE 0.0s
+   Image sin451-lab-vulneravel Building 
+   Image sin451-lab-vulneravel Built
+$ docker compose -f demo/vulneravel/docker-compose.yml run --rm --no-deps app sh -c id; grep CapEff /proc/self/status
+  uid=0(root) gid=0(root) groups=0(root),0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel),11(floppy),20(dialout),26(tape),27(video)
+  CapEff:	000001ffffffffff
+   Network sin451vulneravel_default Creating 
+   Network sin451vulneravel_default Created 
+   Container sin451vulneravel-app-run-b3bbeaf25b0f Creating 
+   Container sin451vulneravel-app-run-b3bbeaf25b0f Created
+$ docker history --no-trunc --format {{.CreatedBy}} sin451-lab-vulneravel
+  CMD ["python" "/app/app.py"]
+  USER root
+  COPY app.py /app/app.py # buildkit
+  ENV DB_PASSWORD=****
+  RUN /bin/sh -c apk add --no-cache curl # buildkit
+  CMD ["python3"]
+  RUN /bin/sh -c set -eux;  for src in idle3 pip3 pydoc3 python3 python3-config; do   dst="$(echo "$src" | tr -d 3)";   [ -s "/usr/local/bin/$src" ];   [ ! -e "/usr/local/bin/$dst" ];   ln -svT "$src" "/usr/local/bin/$dst";  done # buildkit
+  RUN /bin/sh -c set -eux;   apk add --no-cache --virtual .build-deps   bluez-dev   bzip2-dev   dpkg-dev dpkg   findutils   g++   gcc   gdbm-dev   gnupg   libc-dev   libffi-dev   libnsl-dev   libtirpc-dev   linux-headers   make   mpdecimal-dev   ncurses-dev   openssl-dev   pax-utils   readline-dev   s
+  ENV PYTHON_SHA256=8b5536d280142ecf6cdfe15d12a21ba1c65e300bbf7b28a8d0cdb849575797de
+  ENV PYTHON_VERSION=3.15.2
+  RUN /bin/sh -c set -eux;  apk add --no-cache   ca-certificates   tzdata  ; # buildkit
+  ENV LANG=C.UTF-8
+  ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  CMD ["/bin/sh"]
+  ADD alpine-minirootfs-3.24.4-x86_64.tar.gz / # buildkit
+$ docker image inspect --format {{json .Config.Env}} sin451-lab-vulneravel
+  ["PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","LANG=C.UTF-8","PYTHON_VERSION=3.15.2","PYTHON_SHA256=8b5536d280142ecf6cdfe15d12a21ba1c65e300bbf7b28a8d0cdb849575797de","DB_PASSWORD=****"]
+$ docker image inspect --format {{index .RepoDigests 0}} python:alpine
+  Error response from daemon: No such image: python:alpine
