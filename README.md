@@ -1,7 +1,5 @@
 # SIN 451 — Detecção de configuração insegura em Docker: método clássico × IA (NVIDIA)
 
-Projeto individual. Siga o guia em PDF (Procedimento passo a passo — projeto completo em 7 dias).
-
 | Dia | Script | O que faz |
 |-----|--------|-----------|
 | 1 | `01_coletar.py` | clona os repositórios de `repos.txt` e monta `corpus/` + `manifesto.csv` |
